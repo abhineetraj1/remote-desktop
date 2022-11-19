@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<style type="text/css">
+		.btn{
+			background: black;
+			font-size: 20px;
+			color: white;
+			margin: 1vh;
+			padding: 1vh;
+			border: solid;
+			border-radius: 11px;
+		}
+		input{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<style type="text/css"></style>
+
+<a href="/cmd/shutdown+-s+-t+02">
+	<button class="btn">Shutdown</button>
+</a>
+<br><br>
+<a href="/cmd/shutdown+-r+-t+02">
+	<button class="btn">Restart</button>
+</a>
+<br><br>
+<a href="/screenshot">
+	<button class="btn">Screenshot</button>
+</a>
+<br><br>
+<a href="{{url}}">
+	<button class="btn">File Explorer</button>
+</a>
+
+<form method="POST" enctype="multipart/form-data" action="/sendfile">
+	<label class="btn">
+		Send file
+		<input type="file" name="file[]" multiple>
+	</label>
+	<button class="btn">submit</button>
+</form>
+
+</body>
+</html>
